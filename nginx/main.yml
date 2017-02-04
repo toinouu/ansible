@@ -98,7 +98,7 @@
         - vhost
 
     - name: nginx | copy symfony2 config file
-      copy: src=files/symfony2 dest=/etc/nginx/symfony2 owner=root group=root mode=0644
+      copy: src=files/symfony2-php7.0 dest=/etc/nginx/symfony2 owner=root group=root mode=0644
       notify: reload nginx
       tags: nginx
 
