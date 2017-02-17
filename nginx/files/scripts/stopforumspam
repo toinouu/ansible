@@ -28,7 +28,7 @@ mkdir $DIR
 cd $DIR
 
 # get database
-/usr/bin/wget --output-document=$ZIP_FILE "$URL"
+/usr/bin/wget --quiet --output-document=$ZIP_FILE "$URL"
 
 unzip $ZIP_FILE
 

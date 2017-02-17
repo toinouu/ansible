@@ -13,8 +13,14 @@
       with_items:
         - deb http://packages.dotdeb.org jessie all
         - deb-src http://packages.dotdeb.org jessie all
+        - deb http://repo.mysql.com/apt/debian/ jessie mysql-5.6
+        - deb-src http://repo.mysql.com/apt/debian/ jessie mysql-5.6
       tags: dotdeb
 
     - name: dotdeb | install key
       apt_key: url=http://www.dotdeb.org/dotdeb.gpg
+      tags: dotdeb
+
+    - name: dotdeb | install key MYSQL
+      apt_key: url=http://repo.mysql.com/RPM-GPG-KEY-mysql
       tags: dotdeb

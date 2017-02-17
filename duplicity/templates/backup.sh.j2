@@ -3,6 +3,8 @@
 
 targets=({% for target in targets %}'{{ target }}' {% endfor %})
 
+export PASSPHRASE=SomeLongGeneratedHardToCrack
+
 begin () {
     text=$1
     printf "\n--- $text ---\n"
@@ -57,5 +59,7 @@ backup {{ src }} {{ dest }}
 {% endif %}
 
 rm -rf {{ tmp_dir }}
+
+unset PASSPHRASE
 
 exit 0
