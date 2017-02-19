@@ -52,7 +52,7 @@
       tags: mysql
 
     - name: mysql | install optimize cron
-      cron: name="mysql optimize" user="root" special_time="weekly" job="mysqloptimize --all-databases > /dev/null"
+      cron: name="mysql optimize" user="root" special_time="weekly" job="mysqlcheck --all-databases -o > /dev/null"
       tags:
         - crontab
         - mysql
