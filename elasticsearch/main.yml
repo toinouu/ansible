@@ -9,7 +9,7 @@
 
   tasks:
     - name: elasticsearch | add repository key
-      apt_key: url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+      apt_key: url=http://packages.elastic.co/GPG-KEY-elasticsearch
       tags: elasticsearch
 
     - name: elasticsearch | add repository
